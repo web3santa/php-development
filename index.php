@@ -1,33 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="index.php" method="post">
-        <label for="">radius: </label>
-        <input type="text" name="radius" />
-        <input type="submit" value="calculate" />
-    </form>
-</body>
-</html>
 <?php
-   $radius = $_POST["radius"];
+   // if else elseif
+   $hour = 45;
+   $rate = 15;
+   $weekly_pay = null;
 
-    $total = null;
+   if ($hour <= 0) {
+    $weekly_pay = 0;
+   }
+   elseif ($hour <= 40) {
+    $weekly_pay = $hour * $rate;
+   }
+   else {
+    $weekly_pay = ($rate * 40) + (($hour - 40) * ($rate * 1.5));
+   }
 
-    // $total = abs($x);
-    // $total = round($x);
-    // $total = floor($x);
-    // $total = ceil($x);
-    // $total = pow($x, $y);
-    // $total = sqrt($x);
-    // $total = max($x, $y, $z);
-    // $total = min($x, $y, $z);
-    // $total = pi();
-    // $total = rand(50, 55);
+   echo "You made \${$weekly_pay} this week";
 
-    echo $total;
+
+
+
 ?>
