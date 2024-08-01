@@ -6,23 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="get">
-    <label for="">quantity: </label><br>
-    <input type="text" name="quantity" /><br>
-    <input type="submit" value="totals" />
+    <form action="index.php" method="post">
+        <label for="">radius: </label>
+        <input type="text" name="radius" />
+        <input type="submit" value="calculate" />
     </form>
-
 </body>
 </html>
-
 <?php
-    $item = "pizza";
-    $price = 5.99;
-    $quantity = $_GET["quantity"];
+   $radius = $_POST["radius"];
 
-    $total= null;
+    $total = null;
 
-    $total = $quantity * $price;
-    echo "You have ordered {$quantity} * {$item}/s <br>";
-    echo "Your total is \${$total}";
+    // $total = abs($x);
+    // $total = round($x);
+    // $total = floor($x);
+    // $total = ceil($x);
+    // $total = pow($x, $y);
+    // $total = sqrt($x);
+    // $total = max($x, $y, $z);
+    // $total = min($x, $y, $z);
+    // $total = pi();
+    // $total = rand(50, 55);
+
+    echo $total;
 ?>
